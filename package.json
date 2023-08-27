@@ -1,0 +1,41 @@
+{
+  "name": "pancake-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "apis/*",
+    "scripts"
+  ],
+  "packageManager": "pnpm@8.6.0",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "dev": "turbo run dev --filter=web... --concurrency=19",
+    "build": "turbo run build --filter=web...",
+    "start": "turbo run start --filter=web",
+    "clean": "turbo run clean"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "devDependencies": {
+    "@pancakeswap/eslint-config-pancake": "workspace:*",
+    "@pancakeswap/tsconfig": "workspace:*",
+    "@stylelint/postcss-css-in-js": "^0.37.2",
+    "@types/node": "^18.16.2",
+    "tilg": "^0.1.1",
+    "tsx": "^3.12.6",
+    "typescript": "^5.1.3",
+    "turbo": "1.10.2"
+  },
+  "volta": {
+    "node": "18.16.0"
+  },
+  "dependencies": {
+    "@svgr/webpack": "^8.0.1",
+    "crypto": "^1.0.1",
+    "encoding": "^0.1.13",
+    "ws": "^8.13.0"
+  }
+}
